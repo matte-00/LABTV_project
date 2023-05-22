@@ -1,0 +1,31 @@
+<main>
+  <div id="signUp">
+    <h1>Sign up</h1>
+  </div>
+
+  <form #form="ngForm" (ngSubmit)="signUp(form)">
+    <div>
+      <input type="email" placeholder="Email" name="email" ngModel pattern="^([a-z0-9]+\.?)+@{1}([a-z]+\.?)+$" [ngClass]="{ 'invalidInput': form.controls['email']?.invalid, 'requiredInput': form.controls['email']?.value==='' && !form.controls['email']?.pristine, 'compiledInput': form.controls['email']?.valid && form.controls['email']?.value!=='' }">
+
+      <span *ngIf="form.controls['email']?.value==='' && !form.controls['email']?.pristine">Campo obbligatorio</span>
+      <span *ngIf="form.controls['email']?.invalid">Campo non valido</span>
+    </div>
+
+    <div>
+      <input type="password" placeholder="Password" name="password" ngModel pattern="^[a-zA-Z0-9!£$%&=?'^+*@#°,;.:_<>]+$" [ngClass]="{ 'invalidInput': form.controls['password']?.invalid, 'requiredInput': form.controls['password']?.value==='' && !form.controls['password']?.pristine, 'compiledInput': form.controls['password']?.valid && form.controls['password']?.value!=='' }">
+
+      <span *ngIf="form.controls['password']?.value==='' && !form.controls['password']?.pristine">Campo obbligatorio</span>
+      <span *ngIf="form.controls['password']?.invalid">Campo non valido. La password deve avere le lettere maiuscole e/o minuscole e/o numeri. Può contenere anche questi caratteri speciali ! £ $ % & = ? ' ^ + * @ # ° , ; . : _ < >.</span>
+    </div>
+
+    <div>
+      <input type="password" placeholder="Ripeti password" name="rePassword" ngModel [ngClass]="{ 'rePasswordNotSame': form.controls['rePassword']?.value!==form.controls['password']?.value && !form.controls['rePassword']?.pristine, 'compiledInput': form.controls['rePassword']?.valid && form.controls['rePassword']?.value!==''}">
+
+      <span *ngIf="form.controls['rePassword']?.value!==form.controls['password']?.value && !form.controls['rePassword']?.pristine">La password non è uguale</span>
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="form.pristine || form.value.email==='' || form.value.password==='' || form.value.rePassword==='' || (form.controls['rePassword']?.value!==form.controls['password']?.value) || form.invalid">REGISTRATI</button>
+    </div>
+  </form>
+</main>

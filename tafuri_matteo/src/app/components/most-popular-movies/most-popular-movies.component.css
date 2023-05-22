@@ -1,0 +1,76 @@
+main {
+  margin-top: 70px;
+  margin-left: 17px;
+  margin-right: 17px;
+  padding-top: 145px;
+}
+
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main section div {
+  width: 48%;
+  border: 3px solid #809191;
+  border-radius: 17px;
+  margin-bottom: 14px;
+  padding: 12px;
+  background-color: #daf3f3;
+}
+
+main section div h2 {
+  text-align: center;
+  margin: 0;
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+main section div figure {
+  margin: 8px 25px;
+}
+
+main section div figure img {
+  cursor: pointer;
+}
+
+main section div span {
+  display: block;
+  text-align: center;
+  font-family: 'Handlee', cursive;
+  font-size: .8em;
+  margin-bottom: 8px;
+}
+
+main section div aside button {
+  padding: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Dekko', cursive;
+  background-color: #d3e3e7;
+  border: 1px solid #809296;
+}
+
+main section aside {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 570px) {
+  main section div {
+    width: 32%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  main section div {
+    width: 23.5%;
+  }
+}
+
+@media screen and (min-width: 1130px) {
+  main section div {
+    width: 19%;
+  }
+}

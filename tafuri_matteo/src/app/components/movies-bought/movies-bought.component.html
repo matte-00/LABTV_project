@@ -1,0 +1,21 @@
+<main>
+  <section *ngIf="moviesBoughtByUser.length!==0">
+    <section id="moviesBoughtTitle">
+      <span>Film acquistati</span>
+    </section>
+
+    <section id="moviesBought">
+      <aside>
+        <div *ngFor="let e of moviesBoughtByUser">
+          <h2>{{e.original_title}}</h2>
+
+          <figure>
+            <img src="https://image.tmdb.org/t/p/original{{e.poster_path}}" alt="Immagine di copertina del film {{e.original_title}}">
+          </figure>
+
+          <span>Anno uscita: {{e.release_date}}</span>
+        </div>
+      </aside>
+    </section>
+  </section>
+</main>

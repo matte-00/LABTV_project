@@ -1,0 +1,75 @@
+main {
+  padding: 80px 0;
+}
+
+main #signUp {
+  width: 270px;
+  background-color: #bbd7dd;
+  padding: 40px;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+main #signUp h1 {
+  text-align: center;
+  margin: 0;
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+main form {
+  width: 350px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main form div .compiledInput {
+  border-color: #008000;
+  background-color: #e8f8e8;
+}
+
+main form div .requiredInput, main form div .invalidInput, main form div:nth-child(3) .rePasswordNotSame {
+  border-color: #ff0000;
+  background-color: #fff0f0;
+}
+
+main form div:first-child {
+  margin-bottom: 17px;
+}
+
+main form div:nth-child(3) {
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+
+main form div:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+main form div input {
+  width: 100%;
+  border: 1px solid #aaaaaa;
+  border-radius: 6px;
+  padding: 8px;
+  outline: none;
+  margin-bottom: 5px;
+  font-family: 'Dekko', cursive;
+  font-size: .9em;
+}
+
+main form div span {
+  color: #ff0000;
+  font-family: 'Dekko', cursive;
+  font-size: .9em;
+}
+
+main form div button {
+  width: 110px;
+  padding: 5px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Dekko', cursive;
+  background-color: #d3e3e7;
+  border: 1px solid #809296;
+}

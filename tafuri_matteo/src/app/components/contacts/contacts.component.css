@@ -1,0 +1,127 @@
+main {
+  padding: 140px 0;
+}
+
+main #contacts {
+  width: 270px;
+  background-color: #bbd7dd;
+  padding: 40px;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+main #contacts h1 {
+  text-align: center;
+  margin: 0;
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+main form {
+  width: 90%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main form section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 17px;
+}
+
+main form section div {
+  width: 100%;
+}
+
+main form section div:first-child {
+  margin-bottom: 17px;
+}
+
+main form section div .compiledInput, main form div .compiledTextarea {
+  border-color: #008000;
+  background-color: #e8f8e8;
+}
+
+main form section div .requiredInput,
+main form div .requiredTextarea,
+main form section:first-child div:first-child .invalidName,
+main form section:first-child div:nth-child(2) .invalidSurname,
+main form section:nth-child(2) div:first-child .invalidEmail,
+main form section:nth-child(2) div:nth-child(2) .invalidTelephone {
+  border-color: #ff0000;
+  background-color: #fff0f0;
+}
+
+main form section div input {
+  width: 100%;
+  border: 1px solid #aaaaaa;
+  border-radius: 6px;
+  padding: 7px;
+  outline: none;
+  margin-bottom: 5px;
+  font-family: 'Dekko', cursive;
+  font-size: .9em;
+}
+
+main form #send {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+main form div label {
+  display: block;
+  margin-bottom: 3px;
+  font-family: 'Dekko', cursive;
+}
+
+main form div textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #aaaaaa;
+  border-radius: 6px;
+  padding: 10px;
+  outline: none;
+  resize: none;
+  font-family: 'Dekko', cursive;
+  font-size: .9em;
+}
+
+main form div span {
+  color: #ff0000;
+  font-family: 'Dekko', cursive;
+  font-size: .9em;
+}
+
+main form div button {
+  width: 110px;
+  padding: 5px 0;
+  background-color: #d3e3e7;
+  border: 1px solid #809296;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Dekko', cursive;
+}
+
+@media screen and (min-width: 550px) {
+  main form section {
+    flex-wrap: nowrap;
+    gap: 0 35px;
+  }
+
+  main form section div:first-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1030px) {
+  main form {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  main form {
+    width: 65%;
+  }
+}

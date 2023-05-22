@@ -1,0 +1,29 @@
+<app-search-movies [mostPopularMovies]="mostPopularMovies" (isShownMostPopularMoviesEventEmitter)="isSeenMostPopularMovies($event)"></app-search-movies>
+
+<main>
+  <!--
+    NOME PACCHETTO NPM: ngx-infinite-scroll
+
+    infiniteScrollDistance -> indica il punto in cui viene attivato lo scroll infinito
+                              il suo valore è 1 perchè quando la scrollbar arriva al 90% della pagina web lo scroll infinito deve attivarsi
+  -->
+  <section *ngIf="isShownMostPopularMovies" infiniteScroll [infiniteScrollDistance]="1" (scrolled)="infiniteScroll()">
+    <div *ngFor="let e of mostPopularMovies">
+      <h2>{{e.original_title}}</h2>
+
+      <figure>
+        <img src="https://image.tmdb.org/t/p/original{{e.poster_path}}" alt="Immagine di copertina del film {{e.original_title}}" (click)="showMovieDetails(e)">
+      </figure>
+
+      <span>Anno uscita: {{e.release_date}}</span>
+
+      <aside *ngIf="isShownBuyMovie">
+        <button (click)="buyMovie(e)">ACQUISTA</button>
+      </aside>
+    </div>
+
+    <aside>
+      <app-loader *ngIf="isShownInfiniteScrollLoader"></app-loader>
+    </aside>
+  </section>
+</main>

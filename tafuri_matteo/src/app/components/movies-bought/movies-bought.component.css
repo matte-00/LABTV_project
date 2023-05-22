@@ -1,0 +1,77 @@
+main {
+  margin-top: 70px;
+  margin-left: 17px;
+  margin-right: 17px;
+  padding-top: 60px;
+  height: 100%;
+}
+
+main section #moviesBoughtTitle {
+  margin-bottom: 10px;
+}
+
+main section #moviesBoughtTitle span {
+  font-size: 1.5em;
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+main section #moviesBought aside {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 15.9px;
+}
+
+main section #moviesBought aside div {
+  width: 48%;
+  border: 3px solid #809191;
+  border-radius: 17px;
+  padding: 12px;
+  background-color: #daf3f3;
+}
+
+main section #moviesBought aside div h2 {
+  text-align: center;
+  margin: 0;
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+main section #moviesBought aside div figure {
+  margin: 8px 25px;
+}
+
+main section #moviesBought aside div span {
+  display: block;
+  text-align: center;
+  font-family: 'Handlee', cursive;
+  font-size: .8em;
+}
+
+@media screen and (min-width: 570px) {
+  main section #moviesBought {
+    column-gap: 11px;
+  }
+
+  main section #moviesBought aside div {
+    width: 31.3%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  main section #moviesBought {
+    column-gap: 17px;
+  }
+
+  main section #moviesBought aside div {
+    width: 23.5%;
+  }
+}
+
+@media screen and (min-width: 1130px) {
+  main section #moviesBought {
+    column-gap: 14px;
+  }
+
+  main section #moviesBought aside div {
+    width: 18.8%;
+  }
+}

@@ -1,0 +1,20 @@
+<main>
+  <section id="searchMoviesByTitle">
+    <div id="search">
+      <div>
+        <object></object>
+      </div>
+      <input #inputText type="text" placeholder="Cerca..." (keyup.enter)="searchMoviesByTitle(inputText.value)">
+    </div>
+  </section>
+
+  <section *ngIf="isShownSearchedMovies" id="searchedMovies">
+    <span>Risultati per "<b>{{title}}</b>"</span>
+
+    <div *ngFor="let e of searchedMovies">
+      <figure>
+        <img src="https://image.tmdb.org/t/p/original{{e.poster_path}}" alt="Immagine di copertina del film {{e.original_title}}" (click)="showMovieDetails(e)">
+      </figure>
+    </div>
+  </section>
+</main>

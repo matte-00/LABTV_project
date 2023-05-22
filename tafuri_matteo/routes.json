@@ -1,0 +1,4 @@
+{
+  "/buyMovie": "/640/moviesBought",
+  "/moviesBought/:userId": "/640/moviesBought?userId=:userId"
+}

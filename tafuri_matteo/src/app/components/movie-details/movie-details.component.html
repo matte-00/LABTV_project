@@ -1,0 +1,37 @@
+<app-loader *ngIf="isShownMovieDetailsLoader"></app-loader>
+
+<main *ngIf="isShownMovieDetails">
+  <section id="trailer" *ngIf="movieTrailerUrl!==''">
+    <iframe height="250px" width="350px" [src]="movieTrailerUrl" frameBorder=0></iframe>
+  </section>
+
+  <section id="movieDetails">
+    <section>
+      <div id="posterImage">
+        <img src="https://image.tmdb.org/t/p/original{{movieDetails.poster_path}}" alt="Immagine di copertina del film {{movieDetails.original_title}}">
+      </div>
+
+      <div id="titleGenres">
+        <h2>{{movieDetails.original_title}}</h2>
+
+        <div>
+          <span *ngFor="let e of movieDetails.genres; let lastE=last">{{e.name}} <b>{{lastE ? "" : "| "}}</b></span>
+        </div>
+      </div>
+    </section>
+
+    <p>{{movieDetails.overview}}</p>
+  </section>
+
+  <section id="movieCrew">
+    <h3>REGISTA</h3>
+
+    <app-slider [movieDetails]="movieCrew"></app-slider>
+  </section>
+
+  <section id="movieCast">
+    <h3>CAST</h3>
+
+    <app-slider [movieDetails]="movieCast"></app-slider>
+  </section>
+</main>

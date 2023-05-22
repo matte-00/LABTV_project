@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #000000;
+  font-size: 1em;
+  background-color: #e4eeee;
+}
+
+img {
+  max-width: 100%;
+}

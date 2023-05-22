@@ -1,0 +1,57 @@
+<header *ngIf="isShownHeader">
+  <section>
+    <div id="logo">
+      <object></object>
+    </div>
+
+    <div id="openNavbar">
+      <object (click)="openNavbar()"></object>
+    </div>
+  </section>
+
+  <section id="{{valueId}}">
+    <div id="closeNavbar">
+      <object (click)="closeNavbar()"></object>
+    </div>
+
+    <nav>
+      <ul>
+        <li>
+          <a [routerLink]="['/home']">Home</a>
+        </li>
+        <li>
+          <a [routerLink]="['/login']">Login</a>
+        </li>
+        <li>
+          <a [routerLink]="['/contacts']">Contatti</a>
+        </li>
+        <li (click)="showMoviesBought()">
+          <a [routerLink]="[]">Acquisti</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="separator">
+      <hr>
+    </div>
+
+    <div id="socialIcons">
+      <div id="icon_1_2_3">
+        <a href="https://www.facebook.com/themoviedb/">
+          <object></object>
+        </a>
+        <a href="https://www.instagram.com/bestmovie_mag/">
+          <object></object>
+        </a>
+        <a href="https://twitter.com/themoviedb?lang=it">
+          <object></object>
+        </a>
+      </div>
+      <div id="icon_4">
+        <a href="https://www.youtube.com/feed/storefront">
+          <object></object>
+        </a>
+      </div>
+    </div>
+  </section>
+</header>

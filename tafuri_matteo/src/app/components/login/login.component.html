@@ -1,0 +1,28 @@
+<main>
+  <div id="login">
+    <h1>Sign in</h1>
+  </div>
+
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <div>
+      <input type="email" placeholder="Email" name="email" ngModel pattern="^([a-z0-9]+\.?)+@{1}([a-z]+\.?)+$" [ngClass]="{ 'invalidEmail': form.controls['email']?.invalid, 'requiredInput': form.controls['email']?.value==='' && !form.controls['email']?.pristine, 'compiledInput': form.controls['email']?.valid && form.controls['email']?.value!=='' }">
+
+      <span *ngIf="form.controls['email']?.value==='' && !form.controls['email']?.pristine">Campo obbligatorio</span>
+      <span *ngIf="form.controls['email']?.invalid">Campo non valido</span>
+    </div>
+
+    <div>
+      <input type="password" placeholder="Password" name="password" ngModel [ngClass]="{ 'requiredInput': form.controls['password']?.value==='' && !form.controls['password']?.pristine, 'compiledInput': form.controls['password']?.value!=='' }">
+
+      <span *ngIf="form.controls['password']?.value==='' && !form.controls['password']?.pristine">Campo obbligatorio</span>
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="form.pristine || form.value.email==='' || form.value.password==='' || form.invalid">ACCEDI</button>
+    </div>
+
+    <div>
+      <a [routerLink]="['/signUp']">Non hai un account? Registrati</a>
+    </div>
+  </form>
+</main>

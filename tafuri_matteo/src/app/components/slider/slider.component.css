@@ -1,0 +1,80 @@
+section {
+  display: flex;
+  gap: 15px;
+  max-width: 100%;
+  margin: 0 10px;
+  background-color: #e4eeee;
+  border-radius: 12px;
+  overflow-x: scroll;
+  padding-bottom: 7px;
+}
+
+section div {
+  display: flex;
+  flex: 0 0 60%;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #9dcfcf;
+  padding-top: 25px;
+}
+
+section div img {
+  height: 140px;
+  width: 115px;
+  padding: 4px;
+  border-radius: 20%;
+}
+
+section div object {
+  background-image: url(../../../assets/images/sprite_css.png);
+  display: block;
+  height: 140px;
+  width: 115px;
+  background-position: 0 -272px;
+  padding: 4px;
+  border-radius: 20%;
+}
+
+section div h2 {
+  font-family: 'Dekko', cursive;
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 530px) {
+  section div {
+    flex: 0 0 70%;
+  }
+}
+
+@media screen and (min-width: 630px) {
+  section div {
+    flex: 0 0 60%;
+  }
+}
+
+@media screen and (min-width: 745px) {
+  section div {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  section div {
+    flex: 0 0 40%;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  section div {
+    flex: 0 0 30%;
+  }
+}
+
+@media screen and (min-width: 1285px) {
+  section div {
+    flex: 0 0 20%;
+  }
+}

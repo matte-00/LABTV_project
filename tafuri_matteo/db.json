@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "email": "marco.20@gmail.com",
+      "password": "$2a$10$ZpoCeLV6sY0DVPnvncZyxO9lBjeBmyPR/vmXSUkmyvOj23DrhYZiO",
+      "id": 1
+    }
+  ],
+  "messages": [],
+  "moviesBought": [
+    {
+      "userId": "1",
+      "original_title": "Ghosted",
+      "poster_path": "https://image.tmdb.org/t/p/original/liLN69YgoovHVgmlHJ876PKi5Yi.jpg",
+      "release_date": "2023-04-18",
+      "id": 1
+    },
+    {
+      "userId": "1",
+      "original_title": "Ant-Man and the Wasp: Quantumania",
+      "poster_path": "https://image.tmdb.org/t/p/original/ngl2FKBlU4fhbdsrtdom9LVLBXw.jpg",
+      "release_date": "2023-02-15",
+      "id": 2
+    },
+    {
+      "userId": "1",
+      "original_title": "Shazam! Fury of the Gods",
+      "poster_path": "https://image.tmdb.org/t/p/original/2VK4d3mqqTc7LVZLnLPeRiPaJ71.jpg",
+      "release_date": "2023-03-15",
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "original_title": "Guardians of the Galaxy Volume 3",
+      "poster_path": "https://image.tmdb.org/t/p/original/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+      "release_date": "2023-05-03",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "original_title": "Scream VI",
+      "poster_path": "https://image.tmdb.org/t/p/original/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
+      "release_date": "2023-03-08",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "original_title": "The Super Mario Bros. Movie",
+      "poster_path": "https://image.tmdb.org/t/p/original/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+      "release_date": "2023-04-05",
+      "id": 6
+    },
+    {
+      "userId": "1",
+      "original_title": "Avatar: The Way of Water",
+      "poster_path": "https://image.tmdb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+      "release_date": "2022-12-14",
+      "id": 7
+    },
+    {
+      "userId": "1",
+      "original_title": "Peter Pan & Wendy",
+      "poster_path": "https://image.tmdb.org/t/p/original/9NXAlFEE7WDssbXSMgdacsUD58Y.jpg",
+      "release_date": "2023-04-20",
+      "id": 8
+    },
+    {
+      "userId": "1",
+      "original_title": "AKA",
+      "poster_path": "https://image.tmdb.org/t/p/original/3BSxAjiporlwQTWzaHZ9Yrl5C9D.jpg",
+      "release_date": "2023-04-28",
+      "id": 9
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+app-loader {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+main {
+  margin-top: 140px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+main #trailer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+main #movieDetails section {
+  display: flex;
+  gap: 0 13px;
+}
+
+main #movieDetails section #posterImage {
+  width: 35%;
+}
+
+main #movieDetails section #titleGenres {
+  width: 60%;
+}
+
+main #movieDetails section #titleGenres h2 {
+  margin-top: 10px;
+  margin-bottom: 7px;
+  font-family: 'Akaya Kanadaka', cursive;
+  font-size: 1.6em;
+}
+
+main #movieDetails section #titleGenres div {
+  width: 100%;
+}
+
+main #movieDetails section #titleGenres div span {
+  font-family: 'Handlee', cursive;
+  font-size: .9em;
+}
+
+main #movieDetails p {
+  font-family: 'Akaya Kanadaka', cursive;
+  margin-top: 7px;
+}
+
+main #movieCrew {
+  margin-top: 28px;
+  margin-bottom: 23px;
+}
+
+main #movieCrew h3, main #movieCast h3 {
+  font-family: 'Akaya Kanadaka', cursive;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 530px) {
+  main #movieDetails section #posterImage {
+    width: 30%;
+  }
+
+  main #trailer iframe {
+    height: 280px;
+    width: 380px;
+  }
+}
+
+@media screen and (min-width: 630px) {
+  main #movieDetails section #posterImage {
+    width: 25%;
+  }
+
+  main #movieDetails section #titleGenres h2 {
+    font-size: 2em;
+  }
+
+  main #movieDetails section #titleGenres div span {
+    font-size: 1em;
+  }
+
+  main #movieDetails p {
+    font-size: 1.1em;
+  }
+
+  main #movieCrew h3, main #movieCast h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 745px) {
+  main #movieDetails section #posterImage {
+    width: 22%;
+  }
+
+  main #trailer iframe {
+    height: 320px;
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  main #movieDetails section #posterImage {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  main #movieDetails section #posterImage {
+    width: 18.5%;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  main #movieDetails section #posterImage {
+    width: 17.3%;
+  }
+}
+
+@media screen and (min-width: 1063px) {
+  main #movieDetails section #posterImage {
+    width: 16.5%;
+  }
+}
+
+@media screen and (min-width: 1110px) {
+  main #movieDetails section #posterImage {
+    width: 15.5%;
+  }
+}
+
+@media screen and (min-width: 1285px) {
+  main #movieDetails section #posterImage {
+    width: 14%;
+  }
+}

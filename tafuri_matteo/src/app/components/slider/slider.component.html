@@ -1,0 +1,9 @@
+<section>
+  <div *ngFor="let e of movieDetails">
+    <img src="https://image.tmdb.org/t/p/original{{e.profile_path}}" *ngIf="e.profile_path!==null">
+
+    <object *ngIf="e.profile_path===null"></object>
+
+    <h2>{{e.original_name}}</h2>
+  </div>
+</section>

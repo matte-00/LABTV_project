@@ -1,0 +1,54 @@
+<main>
+  <div id="contacts">
+    <h1>Contatti</h1>
+  </div>
+
+  <form #form="ngForm" (ngSubmit)="sendMessage(form)">
+    <section>
+      <div>
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" ngModel pattern="^([a-zA-ZÀÈÌÒÙÁÉÍÓÚàèìòùáéíóúâêîôû]+(\u0020|-)?)+$" [ngClass]="{ 'invalidName': form.controls['name']?.invalid, 'requiredInput': form.controls['name']?.value==='' && !form.controls['name']?.pristine, 'compiledInput': form.controls['name']?.valid && form.controls['name']?.value!=='' }">
+
+        <span *ngIf="form.controls['name']?.value==='' && !form.controls['name']?.pristine">Campo obbligatorio</span>
+        <span *ngIf="form.controls['name']?.invalid">Campo non valido</span>
+      </div>
+
+      <div>
+        <label for="surname">Cognome</label>
+        <input type="text" id="surname" name="surname" ngModel pattern="^([a-zA-ZÀÈÌÒÙÁÉÍÓÚàèìòùáéíóúâêîôû]+(\u0020|-)?)+$" [ngClass]="{ 'invalidSurname': form.controls['surname']?.invalid, 'requiredInput': form.controls['surname']?.value==='' && !form.controls['surname']?.pristine, 'compiledInput': form.controls['surname']?.valid && form.controls['surname']?.value!=='' }">
+
+        <span *ngIf="form.controls['surname']?.value==='' && !form.controls['surname']?.pristine">Campo obbligatorio</span>
+        <span *ngIf="form.controls['surname']?.invalid">Campo non valido</span>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" ngModel pattern="^([a-z0-9]+\.?)+@{1}([a-z]+\.?)+$" [ngClass]="{ 'invalidEmail': form.controls['email']?.invalid, 'requiredInput': form.controls['email']?.value==='' && !form.controls['email']?.pristine, 'compiledInput': form.controls['email']?.valid && form.controls['email']?.value!=='' }">
+
+        <span *ngIf="form.controls['email']?.value==='' && !form.controls['email']?.pristine">Campo obbligatorio</span>
+        <span *ngIf="form.controls['email']?.invalid">Campo non valido</span>
+      </div>
+
+      <div>
+        <label for="telephone">Telefono</label>
+        <input type="tel" id="telephone" name="telephone" ngModel pattern="^[0-9]{3}[0-9]{7}$" [ngClass]="{ 'invalidTelephone': form.controls['telephone']?.invalid, 'requiredInput': form.controls['telephone']?.value==='' && !form.controls['telephone']?.pristine, 'compiledInput': form.controls['telephone']?.valid && form.controls['telephone']?.value!=='' }">
+
+        <span *ngIf="form.controls['telephone']?.value==='' && !form.controls['telephone']?.pristine">Campo obbligatorio</span>
+        <span *ngIf="form.controls['telephone']?.invalid">Campo non valido</span>
+      </div>
+    </section>
+
+    <div>
+      <label for="message">Messaggio</label>
+      <textarea id="message" name="message" ngModel [ngClass]="{ 'requiredTextarea': form.controls['message']?.value==='' && !form.controls['message']?.pristine, 'compiledTextarea': form.controls['message']?.valid && form.controls['message']?.value!=='' }"></textarea>
+
+      <span *ngIf="form.controls['message']?.value==='' && !form.controls['message']?.pristine">Campo obbligatorio</span>
+    </div>
+
+    <div id="send">
+      <button type="submit" [disabled]="form.pristine || form.value.name==='' || form.value.surname==='' || form.value.email==='' || form.value.telephone==='' || form.value.message==='' || form.invalid">INVIA</button>
+    </div>
+  </form>
+</main>

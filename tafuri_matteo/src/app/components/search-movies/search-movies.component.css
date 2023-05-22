@@ -1,0 +1,87 @@
+main #searchMoviesByTitle {
+  position: fixed;
+  padding-top: 42px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #d2e4f8;
+}
+
+main #searchMoviesByTitle #search {
+  border: 1px solid #000000;
+  border-radius: 6px;
+  padding: 6px;
+  width: 75%;
+  background-color: #ffffff;
+}
+
+main #searchMoviesByTitle #search div {
+  display: inline-block;
+}
+
+main #searchMoviesByTitle #search div object {
+  background-image: url(../../../assets/images/sprite_css.png);
+  display: block;
+  height: 16px;
+  width: 16px;
+  background-position: 0 -74px;
+  margin-top: 6px;
+  margin-left: 2.5px;
+}
+
+main #searchMoviesByTitle #search input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2em;
+  margin-left: 5px;
+  width: 90.3%;
+  margin-bottom: 1px;
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+main #searchedMovies {
+  margin-top: 70px;
+  padding-top: 140px;
+}
+
+main #searchedMovies span {
+  display: block;
+  margin-left: 20px;
+  font-size: 1.3em;
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+main #searchedMovies div {
+  display: inline-block;
+  width: 50%;
+}
+
+main #searchedMovies div figure img {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 570px) {
+  main #searchedMovies div {
+    width: 33.3%;
+  }
+}
+
+@media screen and (min-width: 703px) {
+  main #searchMoviesByTitle #search {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  main #searchedMovies div {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1130px) {
+  main #searchedMovies div {
+    width: 20%;
+  }
+}
